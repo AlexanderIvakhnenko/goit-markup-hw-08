@@ -1,0 +1,21 @@
+/* Кнопка заказа в модальном окне */
+
+.btn-modal-form-order {
+	width: 200px;
+	padding-top: 10px;
+	padding-right: 55px;
+	padding-bottom: 10px;
+	padding-left: 55px;
+	margin-right: auto;
+	margin-left: auto;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.89;
+
+	transition: background-color var(--animation-transition);
+
+	&:hover,
+	&:focus {
+		background-color: #188ce8;
+	}
+}

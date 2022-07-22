@@ -1,0 +1,59 @@
+/* Footer-sign подписаться на рассылку */
+.container-subscription {
+	margin-left: 93px;
+}
+
+.form-title {
+	margin-bottom: 20px;
+
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.15;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+
+	color: #ffffff;
+}
+
+.footer-form {
+	display: flex;
+}
+
+.footer-email-input {
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.03em;
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.25;
+
+	color: rgba(255, 255, 255, 0.6);
+
+	width: 358px;
+	padding-left: 16px;
+
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 4px;
+}
+
+.footer-btn-subscrib {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: 12px;
+	width: 180px;
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+}
+
+.icon-subscribe {
+	margin-left: 10px;
+	fill: var(--primary-white-color);
+}

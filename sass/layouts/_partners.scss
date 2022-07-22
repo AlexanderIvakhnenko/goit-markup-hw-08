@@ -1,0 +1,36 @@
+.partner {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+
+	&__link {
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+
+		color: var(--svg-icon-color-gray);
+
+		width: 170px;
+		height: 92px;
+
+		border: 1px solid #afb1b8;
+		border-radius: 4px;
+
+		transition: color var(--animation-transition), border var(--animation-transition);
+	}
+
+	&__icon {
+		fill: currentColor;
+	}
+}
+
+.partner .partner__item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.partner__link:hover,
+.partner__link:focus {
+	color: var(--accent-color);
+	border: 1px solid var(--accent-color);
+}

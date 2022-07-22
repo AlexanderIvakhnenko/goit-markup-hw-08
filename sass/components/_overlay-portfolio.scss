@@ -1,0 +1,37 @@
+/* Overlay portfolio*/
+.projects-overlay {
+	position: relative;
+	overflow: hidden;
+}
+
+.projects-text {
+	position: absolute;
+
+	display: block;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 63px 24px;
+
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.55;
+	letter-spacing: 0.03em;
+
+	color: var(--primary-white-color);
+	background-color: rgba(33, 150, 243, 0.9);
+
+	transform: translateY(100%);
+	transition: transform var(--animation-transition), opacity var(--animation-transition);
+
+	opacity: 0;
+}
+
+.projects-element:hover .projects-text {
+	opacity: 1;
+	transform: translateY(0);
+}
