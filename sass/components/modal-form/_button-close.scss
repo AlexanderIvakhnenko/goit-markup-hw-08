@@ -1,4 +1,5 @@
 .button-close {
+	fill: currentColor;
 	width: 18px;
 	height: 18px;
 }
@@ -17,6 +18,8 @@
 	background: transparent;
 	cursor: pointer;
 	fill: #000000;
+
+	z-index: 1000;
 
 	transition: fill var(--animation-transition);
 

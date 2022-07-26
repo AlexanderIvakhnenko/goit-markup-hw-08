@@ -15,7 +15,7 @@
 
 	transition: opacity var(--animation-transition), visibility var(--animation-transition);
 
-	z-index: 2;
+	z-index: 1000;
 }
 
 .backdrop.is-hidden {
@@ -26,13 +26,15 @@
 
 .modal {
 	position: absolute;
+	margin: 0;
+	padding: 0;
 	top: 50%;
 	left: 50%;
-	width: 528px;
-	height: 581px;
+	width: 450px;
+	height: 609px;
 	padding: 40px;
 
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) scale(1);
 
 	border-radius: 4px;
 
@@ -40,4 +42,9 @@
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
 	transition: transform var(--animation-transition);
+
+	@media screen and (min-width: 1200px) {
+		width: 528px;
+		height: 581px;
+	}
 }
