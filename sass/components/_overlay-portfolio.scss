@@ -1,4 +1,10 @@
 /* Overlay portfolio*/
+.projects-box__first {
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		padding-bottom: 56px;
+	}
+}
+
 .projects-overlay {
 	position: relative;
 	overflow: hidden;
@@ -8,8 +14,8 @@
 	position: absolute;
 
 	display: block;
-	align-items: center;
-	justify-content: center;
+	// align-items: center;
+	// justify-content: center;
 	top: 0;
 	left: 0;
 	width: 100%;

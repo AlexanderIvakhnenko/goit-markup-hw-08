@@ -2,7 +2,8 @@
 button.list-filter__button {
 	display: flex;
 
-	padding: 6px, 22px;
+	// padding: 6px, 22px;
+	margin-bottom: 16px;
 	margin-right: 0;
 
 	color: var(--primary-text-color);
@@ -65,9 +66,14 @@ button.list-filter__button {
 .list-filter {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 50px;
+	margin-bottom: 34px;
 
 	& > &__item:nth-child(n + 2) {
 		margin-left: 8px;
+	}
+
+	@media screen and (max-width: 480px) {
+		display: flex;
+		flex-wrap: wrap;
 	}
 }
