@@ -1,7 +1,12 @@
 /* Overlay portfolio*/
-.projects-box__first {
+.link-elements__first {
 	@media screen and (min-width: 768px) and (max-width: 1199px) {
 		padding-bottom: 56px;
+	}
+}
+.projects-box__first {
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		flex-grow: 1;
 	}
 }
 
