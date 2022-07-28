@@ -1,14 +1,32 @@
 /* Overlay portfolio*/
-.link-elements__first {
-	@media screen and (min-width: 768px) and (max-width: 1199px) {
-		padding-bottom: 56px;
-	}
-}
-.projects-box__first {
-	@media screen and (min-width: 768px) and (max-width: 1199px) {
-		flex-grow: 1;
-	}
-}
+// .link-elements--grow {
+// 	@media screen and (min-width: 768px) and (max-width: 1199px) {
+// 		// padding-bottom: 56px;
+// 		display: flex;
+// 		flex-direction: column;
+// 		height: 100%;
+// 	}
+// }
+// // .projects-element--grow {
+// // 	@media screen and (min-width: 768px) and (max-width: 1199px) {
+// // 		display: flex;
+// // 		flex-direction: column;
+// // 		height: 100%;
+// // 	}
+// // }
+// // .projects-overlay__first {
+// // 	@media screen and (min-width: 768px) and (max-width: 1199px) {
+// // 		display: flex;
+// // 		flex-direction: column;
+// // 		height: 100%;
+// // 	}
+// // }
+// .projects-box--grow {
+// 	@media screen and (min-width: 768px) and (max-width: 1199px) {
+// 		// padding-bottom: 56px;
+// 		flex-grow: 1;
+// 	}
+// }
 
 .projects-overlay {
 	position: relative;

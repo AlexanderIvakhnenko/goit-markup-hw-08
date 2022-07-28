@@ -102,56 +102,42 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-hero/Header/img__sm.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero/Header/img__sm.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-hero/img__sm.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero/img__sm.jpg");
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .overlay {
-    background-image: url(../images/bg-hero/Header/img__sm@2x.jpg);
+    background-image: url(../images/bg-hero/img__sm@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-hero/Header/img__md.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero/Header/img__md.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-hero/img__md.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero/img__md.jpg");
     max-width: 768px;
     height: 400px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .overlay {
-    background-image: url(../images/bg-hero/Header/img__md@2x.jpg);
+    background-image: url(../images/bg-hero/img__md@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-hero/Header/img__lg.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero/Header/img__lg.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-hero/img__lg.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero/img__lg.jpg");
     max-width: 1600px;
     height: 600px;
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .overlay {
-    background-image: url(../../images/bg-hero/Header/img__lg@2x.jpg);
+    background-image: url(../images/bg-hero/img__lg@2x.jpg);
   }
 }
 
 /* Overlay portfolio*/
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .link-elements__first {
-    padding-bottom: 56px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .projects-box__first {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-
 .projects-overlay {
   position: relative;
   overflow: hidden;
@@ -1613,24 +1599,34 @@ button.list-filter__button.mark {
   }
 }
 
+.link-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  height: 100%;
+  -webkit-transition: -webkit-box-shadow var(--animation-transition);
+  transition: -webkit-box-shadow var(--animation-transition);
+  transition: box-shadow var(--animation-transition);
+  transition: box-shadow var(--animation-transition), -webkit-box-shadow var(--animation-transition);
+}
+
 .projects-box {
   border: 1px solid #eeeeee;
   padding: 20px 24px;
   border-top: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 @media screen and (min-width: 1200px) {
   .projects-box {
     max-width: 370px;
   }
-}
-
-.link-elements {
-  display: block;
-  text-decoration: none;
-  -webkit-transition: -webkit-box-shadow var(--animation-transition);
-  transition: -webkit-box-shadow var(--animation-transition);
-  transition: box-shadow var(--animation-transition);
-  transition: box-shadow var(--animation-transition), -webkit-box-shadow var(--animation-transition);
 }
 
 .projects .title {
@@ -1654,7 +1650,6 @@ button.list-filter__button.mark {
 }
 
 .projects-element {
-  padding-bottom: 30px;
   -webkit-transition: -webkit-box-shadow var(--animation-transition);
   transition: -webkit-box-shadow var(--animation-transition);
   transition: box-shadow var(--animation-transition);
