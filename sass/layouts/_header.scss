@@ -63,17 +63,19 @@
 }
 
 .link.current::after {
-	position: absolute;
-	content: "";
-	display: block;
-	left: 0;
-	bottom: 0;
+	@media screen and(min-width: 768px) {
+		position: absolute;
+		content: "";
+		display: block;
+		left: 0;
+		bottom: 0;
 
-	width: 100%;
-	height: 4px;
+		width: 100%;
+		height: 4px;
 
-	background-color: var(--accent-color);
-	border-radius: 2px;
+		background-color: var(--accent-color);
+		border-radius: 2px;
+	}
 }
 /* Иконки навигации */
 .auth-nav {

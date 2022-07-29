@@ -566,6 +566,10 @@ body {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
+.link {
+  text-decoration: none;
+}
+
 .title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -650,16 +654,18 @@ body {
   position: relative;
 }
 
-.link.current::after {
-  position: absolute;
-  content: "";
-  display: block;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
+@media screen and (min-width: 768px) {
+  .link.current::after {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
 }
 
 /* Иконки навигации */
@@ -888,7 +894,7 @@ body {
 
 .section .caption {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -980,7 +986,7 @@ body {
 
 .team .text {
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   color: var(--title-text-color);
   font-weight: 400;
   font-size: 16px;
@@ -1241,7 +1247,7 @@ body {
   margin-top: 9px;
 }
 
-.contact .link {
+.info-first {
   margin-bottom: 9px;
   color: var(--primary-white-color);
   text-decoration: none;
@@ -1252,7 +1258,7 @@ body {
   -webkit-transition: color var(--animation-transition);
   transition: color var(--animation-transition);
 }
-.contact .link:hover, .contact .link:focus {
+.info-first:hover, .info-first:focus {
   color: var(--accent-color);
 }
 
@@ -1540,18 +1546,9 @@ button.list-filter__button.mark {
 }
 
 .list-filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
-.list-filter > .list-filter__item:nth-child(n+2) {
-  margin-left: 8px;
-}
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .list-filter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1559,6 +1556,20 @@ button.list-filter__button.mark {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+@media screen and (min-width: 768px) {
+  .list-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+.list-filter > .list-filter__item:nth-child(n+2) {
+  margin-left: 8px;
 }
 
 /* Элементы  */
@@ -1650,6 +1661,7 @@ button.list-filter__button.mark {
 }
 
 .projects-element {
+  padding-bottom: 30px;
   -webkit-transition: -webkit-box-shadow var(--animation-transition);
   transition: -webkit-box-shadow var(--animation-transition);
   transition: box-shadow var(--animation-transition);
