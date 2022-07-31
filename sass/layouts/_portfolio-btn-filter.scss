@@ -3,7 +3,7 @@ button.list-filter__button {
 	display: flex;
 
 	// padding: 6px, 22px;
-	margin-bottom: 16px;
+
 	margin-right: 0;
 
 	color: var(--primary-text-color);
@@ -30,36 +30,31 @@ button.list-filter__button {
 	&.all {
 		width: 73px;
 		height: 38px;
-		left: 510px;
-		top: 162px;
+	
 	}
 
 	&.veb {
 		width: 128px;
 		height: 38px;
-		left: 591px;
-		top: 162px;
+		
 	}
 
 	&.app {
 		width: 145px;
 		height: 38px;
-		left: 727px;
-		top: 162px;
+		
 	}
 
 	&.des {
 		width: 103px;
 		height: 38px;
-		left: 880px;
-		top: 162px;
+		
 	}
 
 	&.mark {
 		width: 130px;
 		height: 38px;
-		left: 991px;
-		top: 162px;
+		
 	}
 }
 
@@ -71,7 +66,7 @@ button.list-filter__button {
 		flex-wrap: wrap;
 
 		// justify-content: center;
-		// margin-bottom: 30px;
+		margin-bottom: 40px;
 	}
 
 	@media screen and (min-width: 768px) {
@@ -79,8 +74,22 @@ button.list-filter__button {
 		justify-content: center;
 		margin-bottom: 30px;
 	}
+		@media screen and (min-width: 1200px) {
+margin-bottom: 50px;
+		}
 
-	& > &__item:nth-child(n + 2) {
-		margin-left: 8px;
+}
+
+.list-filter__item {
+	&:not(:last-child) {
+		margin-right: 8px;
+	}
+
+
+
+	@media screen and (max-width: 767px) {
+		&:nth-child(-n+3) {
+			margin-bottom: 15px;
+		}
 	}
 }

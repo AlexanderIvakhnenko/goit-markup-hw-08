@@ -95,7 +95,6 @@ body {
 }
 
 .overlay {
-  max-width: 480px;
   height: 480px;
   margin-left: auto;
   margin-right: auto;
@@ -105,22 +104,10 @@ body {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-hero/img__sm.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero/img__sm.jpg");
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .overlay {
-    background-image: url(../images/bg-hero/img__sm@2x.jpg);
-  }
-}
 @media screen and (min-width: 768px) {
   .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-hero/img__md.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero/img__md.jpg");
-    max-width: 768px;
-    height: 400px;
-  }
-}
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .overlay {
-    background-image: url(../images/bg-hero/img__md@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -131,12 +118,6 @@ body {
     height: 600px;
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .overlay {
-    background-image: url(../images/bg-hero/img__lg@2x.jpg);
-  }
-}
-
 /* Overlay portfolio*/
 .projects-overlay {
   position: relative;
@@ -653,6 +634,9 @@ body {
 .item {
   position: relative;
 }
+.item:not(:last-child) {
+  margin-bottom: 9px;
+}
 
 @media screen and (min-width: 768px) {
   .link.current::after {
@@ -894,12 +878,18 @@ body {
 
 .section .caption {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1, 17;
   text-align: center;
+}
+@media screen and (max-width: 1199px) {
+  .section .caption {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 }
 
 .caption__list {
@@ -1365,7 +1355,7 @@ body {
 }
 
 .footer-email-input {
-  padding-left: 30px;
+  padding-left: 16px;
   height: 50px;
   color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1490,7 +1480,6 @@ button.list-filter__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 16px;
   margin-right: 0;
   color: var(--primary-text-color);
   background-color: var(--secondary-dg-but-color);
@@ -1517,32 +1506,22 @@ button.list-filter__button:hover, button.list-filter__button:focus {
 button.list-filter__button.all {
   width: 73px;
   height: 38px;
-  left: 510px;
-  top: 162px;
 }
 button.list-filter__button.veb {
   width: 128px;
   height: 38px;
-  left: 591px;
-  top: 162px;
 }
 button.list-filter__button.app {
   width: 145px;
   height: 38px;
-  left: 727px;
-  top: 162px;
 }
 button.list-filter__button.des {
   width: 103px;
   height: 38px;
-  left: 880px;
-  top: 162px;
 }
 button.list-filter__button.mark {
   width: 130px;
   height: 38px;
-  left: 991px;
-  top: 162px;
 }
 
 .list-filter {
@@ -1555,6 +1534,7 @@ button.list-filter__button.mark {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1568,8 +1548,19 @@ button.list-filter__button.mark {
     margin-bottom: 30px;
   }
 }
-.list-filter > .list-filter__item:nth-child(n+2) {
-  margin-left: 8px;
+@media screen and (min-width: 1200px) {
+  .list-filter {
+    margin-bottom: 50px;
+  }
+}
+
+.list-filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+@media screen and (max-width: 767px) {
+  .list-filter__item:nth-child(-n+3) {
+    margin-bottom: 15px;
+  }
 }
 
 /* Элементы  */
@@ -1607,6 +1598,9 @@ button.list-filter__button.mark {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: -15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1661,7 +1655,6 @@ button.list-filter__button.mark {
 }
 
 .projects-element {
-  padding-bottom: 30px;
   -webkit-transition: -webkit-box-shadow var(--animation-transition);
   transition: -webkit-box-shadow var(--animation-transition);
   transition: box-shadow var(--animation-transition);

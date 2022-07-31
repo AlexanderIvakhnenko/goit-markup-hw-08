@@ -60,6 +60,9 @@
 
 .item {
 	position: relative;
+	&:not(:last-child){
+		margin-bottom: 9px;
+	}
 }
 
 .link.current::after {
